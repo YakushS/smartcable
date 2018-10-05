@@ -125,7 +125,8 @@ typedef enum
 typedef enum
 {
   USART_Mode_Rx    = (uint8_t)0x04,  /*!< Receive Enable */
-  USART_Mode_Tx    = (uint8_t)0x08   /*!< Transmit Enable */
+  USART_Mode_Tx    = (uint8_t)0x08,  /*!< Transmit Enable */
+  USART_Mode_RxTx  = (uint8_t)0x0C   /*!< Receive and Transmit Enable */
 } USART_Mode_TypeDef;
 
 /**

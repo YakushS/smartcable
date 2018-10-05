@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>2</fileVersion>
-    <fileChecksum>4077305366</fileChecksum>
+    <fileChecksum>3279465436</fileChecksum>
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$PROJ_DIR$\Debug\Obj\stm8l15x_gpio.pbi</file>
-            <file>$PROJ_DIR$\STM8L15x_StdPeriph_Driver\inc\stm8l15x_spi.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm8l15x_gpio.o</file>
             <file>$PROJ_DIR$\STM8L15x_StdPeriph_Driver\inc\stm8l15x_usart.h</file>
-            <file>$PROJ_DIR$\main.c</file>
+            <file>$PROJ_DIR$\STM8L15x_StdPeriph_Driver\inc\stm8l15x_spi.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm8l15x_gpio.pbi</file>
             <file>$PROJ_DIR$\STM8L15x_StdPeriph_Driver\src\stm8l15x_clk.c</file>
-            <file>$PROJ_DIR$\STM8L15x_StdPeriph_Driver\src\stm8l15x_spi.c</file>
-            <file>$PROJ_DIR$\bi.c</file>
             <file>$PROJ_DIR$\STM8L15x_StdPeriph_Driver\src\stm8l15x_gpio.c</file>
             <file>$PROJ_DIR$\STM8L15x_StdPeriph_Driver\src\stm8l15x_usart.c</file>
             <file>$PROJ_DIR$\lis331.c</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm8l15x_gpio.o</file>
+            <file>$PROJ_DIR$\STM8L15x_StdPeriph_Driver\src\stm8l15x_spi.c</file>
+            <file>$PROJ_DIR$\bi.c</file>
+            <file>$PROJ_DIR$\main.c</file>
             <file>$TOOLKIT_DIR$\config\lnkstm8l151f3.icf</file>
             <file>$PROJ_DIR$\Debug\Obj\stm8l15x_clk.__cstat.et</file>
             <file>$PROJ_DIR$\stm8l15x_conf.h</file>
@@ -51,30 +51,8 @@
             <file>$PROJ_DIR$\bi.h</file>
             <file>$PROJ_DIR$\Debug\Obj\bi.__cstat.et</file>
             <file>$PROJ_DIR$\Debug\Obj\lis331.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
         </outputs>
-        <file>
-            <name>$PROJ_DIR$\main.c</name>
-            <outputs>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 30</file>
-                </tool>
-                <tool>
-                    <name>ICCSTM8</name>
-                    <file> 29</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 33</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 21 23 19 2 38 13 24 20 1 37 28</file>
-                </tool>
-            </inputs>
-        </file>
         <file>
             <name>$PROJ_DIR$\STM8L15x_StdPeriph_Driver\src\stm8l15x_clk.c</name>
             <outputs>
@@ -94,53 +72,11 @@
             <inputs>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 21 23 37 19 2 24 13 20 1</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\STM8L15x_StdPeriph_Driver\src\stm8l15x_spi.c</name>
-            <outputs>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 17</file>
+                    <file> 1 21 19 24 37 23 13 20 2</file>
                 </tool>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 18</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 14</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 1 21 24 13 20 37 19 23 2</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\bi.c</name>
-            <outputs>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 42</file>
-                </tool>
-                <tool>
-                    <name>ICCSTM8</name>
-                    <file> 41</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 44</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 37 23 19 2 21 28 13 24 20 1 43</file>
+                    <file> 46 24 21 13 19 20 23 2 1 37</file>
                 </tool>
             </inputs>
         </file>
@@ -149,11 +85,11 @@
             <outputs>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 0</file>
+                    <file> 3</file>
                 </tool>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 10</file>
+                    <file> 0</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
@@ -163,7 +99,11 @@
             <inputs>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 23 21 37 19 2 13 24 20 1</file>
+                    <file> 1 21 19 23 37 13 24 20 2</file>
+                </tool>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 46 23 21 13 24 19 20 2 1 37</file>
                 </tool>
             </inputs>
         </file>
@@ -186,7 +126,11 @@
             <inputs>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 21 23 37 19 2 13 24 20 1</file>
+                    <file> 21 23 37 1 19 13 24 20 2</file>
+                </tool>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 46 1 21 13 24 19 20 23 2 37</file>
                 </tool>
             </inputs>
         </file>
@@ -209,7 +153,84 @@
             <inputs>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 37 28 20 13 24 1 21 19 23 2 38</file>
+                    <file> 19 21 1 23 38 28 13 24 20 2 37</file>
+                </tool>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 46 38 28 13 24 21 37 19 20 23 2 1</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\STM8L15x_StdPeriph_Driver\src\stm8l15x_spi.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 17</file>
+                </tool>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 18</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 14</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 21 13 20 2 24 37 19 23 1</file>
+                </tool>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 46 2 21 13 24 19 20 23 1 37</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\bi.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 42</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 44</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 37 23 19 1 21 28 13 24 20 2 43</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\main.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 30</file>
+                </tool>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 29</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 33</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 21 20 38 13 24 2 37 28 19 23 1</file>
+                </tool>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 46 28 13 24 21 37 19 20 23 2 1 38</file>
                 </tool>
             </inputs>
         </file>
@@ -224,7 +245,7 @@
             <inputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 11 39 29 34 10 18 22 27 26</file>
+                    <file> 11 39 29 34 0 18 22 27 26</file>
                 </tool>
             </inputs>
         </file>
@@ -233,41 +254,13 @@
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 25 32</file>
+                    <file> 32 25</file>
                 </tool>
             </outputs>
         </file>
         <forcedrebuild>
-            <name>$PROJ_DIR$\main.c</name>
-            <tool>ICCSTM8</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\STM8L15x_StdPeriph_Driver\src\stm8l15x_clk.c</name>
-            <tool>ICCSTM8</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\STM8L15x_StdPeriph_Driver\src\stm8l15x_spi.c</name>
-            <tool>ICCSTM8</tool>
-        </forcedrebuild>
-        <forcedrebuild>
             <name>$PROJ_DIR$\bi.c</name>
             <tool>ICCSTM8</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\STM8L15x_StdPeriph_Driver\src\stm8l15x_gpio.c</name>
-            <tool>ICCSTM8</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\STM8L15x_StdPeriph_Driver\src\stm8l15x_usart.c</name>
-            <tool>ICCSTM8</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\lis331.c</name>
-            <tool>ICCSTM8</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>[MULTI_TOOL]</name>
-            <tool>ILINK</tool>
         </forcedrebuild>
     </configuration>
     <configuration>

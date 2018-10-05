@@ -32,6 +32,7 @@ int main( void )
     
     CLK_PeripheralClockConfig( CLK_Peripheral_SPI1, ENABLE );
     
+    SPI_DeInit(SPI1);
     SPI_Init( SPI1,
               SPI_FirstBit_MSB,
               SPI_BaudRatePrescaler_16,
@@ -42,37 +43,31 @@ int main( void )
               SPI_NSS_Soft,
               0x00 ); 
     SPI_Cmd( SPI1, ENABLE );
-      
-    tmp = acc_read_reg(0x10);  
     
+    CLK_PeripheralClockConfig( CLK_Peripheral_USART1, ENABLE );
+    
+    USART_DeInit(USART1);
+    USART_Init(USART1, (uint32_t)115200, USART_WordLength_8b, USART_StopBits_1, USART_Parity_No, USART_Mode_RxTx);
+    USART_HalfDuplexCmd(USART1, ENABLE);
+    
+    tmp = acc_read_reg(0x10);
     acc_write_reg(0x20, 0x40);  
     
     while(1)
     {
+        while(!(USART1->SR & USART_FLAG_RXNE));
+        if( USART1->DR != 0x02 ) continue;     
+      
         x = acc_read_reg(0x29);
         y = acc_read_reg(0x2b); 
-        z = acc_read_reg(0x2d); 
-    }
-    /*while(1)
-    {
-        RESET(SPI_CS_PORT, SPI_CS_PIN);
-        tmp = spi_rw(MULTIPLE_READ|0x00);
-        tmp = spi_rw(0xff);
-        SET(SPI_CS_PORT, SPI_CS_PIN);
+        z = acc_read_reg(0x2d);
         
-        RESET(SPI_CS_PORT, SPI_CS_PIN);
-        tmp = spi_rw(0x80|0x11);
-        tmp = spi_rw(0xff);
-        SET(SPI_CS_PORT, SPI_CS_PIN);
-        
-        RESET(SPI_CS_PORT, SPI_CS_PIN);
-        tmp = spi_rw(0x80|0x12);
-        tmp = spi_rw(0xff);
-        SET(SPI_CS_PORT, SPI_CS_PIN);
-        
-        //TOGGLE(SPI_SCK_PORT, SPI_SCK_PIN);
-        //SET(SPI_SCK_PORT, SPI_SCK_PIN);
-        //RESET(SPI_SCK_PORT, SPI_SCK_PIN);
-    }*/  
+        USART1->DR = x;
+        while( !(USART1->SR & USART_FLAG_TC) );
+        USART1->DR = y;
+        while( !(USART1->SR & USART_FLAG_TC) );
+        USART1->DR = z;
+        while( !(USART1->SR & USART_FLAG_TC) );
+    }    
 }
  
