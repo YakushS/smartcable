@@ -2113,6 +2113,9 @@
         </file>
     </group>
     <file>
+        <name>$PROJ_DIR$\bi.c</name>
+    </file>
+    <file>
         <name>$PROJ_DIR$\lis331.c</name>
     </file>
     <file>

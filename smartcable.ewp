@@ -252,7 +252,7 @@
                 </option>
                 <option>
                     <name>PreInclude</name>
-                    <state></state>
+                    <state>bool</state>
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
@@ -1619,6 +1619,9 @@
             <name>$PROJ_DIR$\STM8L15x_StdPeriph_Driver\src\stm8l15x_usart.c</name>
         </file>
     </group>
+    <file>
+        <name>$PROJ_DIR$\bi.c</name>
+    </file>
     <file>
         <name>$PROJ_DIR$\lis331.c</name>
     </file>
